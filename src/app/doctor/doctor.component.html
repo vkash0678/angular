@@ -1,0 +1,35 @@
+<p>
+  Name is :<input [(ngModel)] = "doctor.Name">
+</p>
+<p>  
+Age is: <input [(ngModel)] = "doctor.Age">
+</p>
+<p>
+  Speciality is: <input [(ngModel)] = "doctor.Speciality">
+</p>
+<p>
+  Mobile is : <input [(ngModel)] = "doctor.Mobile">
+</p>
+<p>
+  Emaill is :<input [(ngModel)] = "doctor.Email">
+</p>
+<p>
+  Image is :<input [(ngModel)] = "doctor.Image">
+</p>
+
+<table>
+  <th>Name</th>
+  <th>Age</th>
+  <th>Speciality</th>
+  <th>Mobile</th>
+  <th>Email</th>
+  <th>Image</th>
+  <tr *ngFor="let x of doctors">
+    <td>{{x.Name}}</td>
+    <td>{{x.Age}}</td>
+    <td>{{x.Speciality}}</td>
+    <td>{{x.Mobile}}</td>
+    <td>{{x.Email}}</td>
+    <td><img [src]=x.pic width="100" height="100"/></td>
+  </tr>
+</table>

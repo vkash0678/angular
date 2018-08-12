@@ -1,0 +1,22 @@
+<p>
+  City Name : <input [(ngModel)] = "city.name">
+</p>
+<p>
+  City Population : <input [(ngModel)] = "city.population">
+</p>
+<p>
+  <button (click)="saveCity()">Save</button>
+</p>
+
+<hr>
+<table>
+  <th>Name</th>
+  <th>Population</th>
+  <tr *ngFor="let x of cities">
+    <td>{{ x.data.name }}</td>
+    <td>{{ x.data.population }}</td>
+    <td>
+      <button (click)="deleteCity(x.key)">Delete</button>
+    </td>
+  </tr>
+</table>
